@@ -1,0 +1,17 @@
+server:
+  port: 9100
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    mode: HTML5
+    prefix: classpath:/templates/thymeleaf/
+    
+logging:
+  level: 
+    root: debug
