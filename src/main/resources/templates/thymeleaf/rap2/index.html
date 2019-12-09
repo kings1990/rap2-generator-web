@@ -25,7 +25,7 @@
 
     <link href="../../static/zui/1.8.1/lib/uploader/zui.uploader.min.css" rel="stylesheet">
     <script src="../../static/zui/1.8.1/lib/uploader/zui.uploader.min.js"></script>
-    
+
     <style>
         .treegrid-expander {
             top: 5px;
@@ -79,16 +79,17 @@
                                 <span class="text-danger" data-valmsg-for="sig" data-valmsg-replace="true"></span>
                             </div>
                         </div>
-                        
+
                         <div class="form-group col-sm-12">
                             <label class="control-label col-sm-1" for="interfaceUrl">接口地址:</label>
                             <div class="col-sm-11">
                                 <input data-val="true" data-val-required="必填" class="col-xs-10 col-sm-10 form-control"
                                        type="text" id="interfaceUrl" name="interfaceUrl" placeholder="interfaceUrl">
-                                <span class="text-danger" data-valmsg-for="interfaceUrl" data-valmsg-replace="true"></span>
+                                <span class="text-danger" data-valmsg-for="interfaceUrl"
+                                      data-valmsg-replace="true"></span>
                             </div>
                         </div>
-                        <div class="form-group col-sm-12" >
+                        <div class="form-group col-sm-12">
                             <label class="control-label col-sm-1">参数形式:</label>
                             <div class="col-sm-11">
                                 <label class="radio-inline">
@@ -97,11 +98,12 @@
                                 <label class="radio-inline">
                                     <input type="radio" name="requestParamsType" value="BODY_PARAMS"> BODY_PARAMS
                                 </label>
-                                <span class="text-danger" data-valmsg-for="requestParamsType" data-valmsg-replace="true"></span>
+                                <span class="text-danger" data-valmsg-for="requestParamsType"
+                                      data-valmsg-replace="true"></span>
                             </div>
                         </div>
 
-                        
+
                         <div class="form-group col-sm-12 hidden" id="bodyOptionDiv">
                             <label class="control-label col-sm-1">BodyOption:</label>
                             <div class="col-sm-11">
@@ -109,7 +111,8 @@
                                     <input type="radio" name="bodyOption" checked value="FORM_DATA"> FORM_DATA
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="bodyOption" value="X_WWW_FORM_URLENCODED"> X_WWW_FORM_URLENCODED
+                                    <input type="radio" name="bodyOption" value="X_WWW_FORM_URLENCODED">
+                                    X_WWW_FORM_URLENCODED
                                 </label>
                                 <label class="radio-inline">
                                     <input type="radio" name="bodyOption" value="RAW"> RAW
@@ -117,7 +120,8 @@
                                 <label class="radio-inline">
                                     <input type="radio" name="bodyOption" value="BINARY"> BINARY
                                 </label>
-                                <span class="text-danger" data-valmsg-for="bodyOption" data-valmsg-replace="true"></span>
+                                <span class="text-danger" data-valmsg-for="bodyOption"
+                                      data-valmsg-replace="true"></span>
                             </div>
                         </div>
                     </div>
@@ -145,8 +149,10 @@
                                     <label class="control-label col-sm-4" for="requestJavaClassname">requestJavaClassname:</label>
                                     <div class="col-sm-8">
                                         <input data-val="true" class="col-xs-10 col-sm-10 form-control"
-                                               type="text" id="requestJavaClassname" name="requestJavaClassname" readonly placeholder="requestJavaClassname">
-                                        <span class="text-danger" data-valmsg-for="requestJavaClassname" data-valmsg-replace="true"></span>
+                                               type="text" id="requestJavaClassname" name="requestJavaClassname"
+                                               readonly placeholder="requestJavaClassname">
+                                        <span class="text-danger" data-valmsg-for="requestJavaClassname"
+                                              data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
                                 <div class="form-group col-sm-12">
@@ -159,8 +165,12 @@
                                         <div>
                                             <hr class="divider">
                                             <div class="uploader-status pull-right text-muted"></div>
-                                            <button type="button" class="btn btn-link uploader-btn-browse"><i class="icon icon-plus"></i> 选择文件</button>
-                                            <button type="button" class="btn btn-link uploader-btn-start"><i class="icon icon-cloud-upload"></i> 开始上传</button>
+                                            <button type="button" class="btn btn-link uploader-btn-browse"><i
+                                                    class="icon icon-plus"></i> 选择文件
+                                            </button>
+                                            <button type="button" class="btn btn-link uploader-btn-start"><i
+                                                    class="icon icon-cloud-upload"></i> 开始上传
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -171,7 +181,8 @@
                             <div class="panel-heading">输出java文件</div>
                             <div class="panel-body">
                                 <div class="form-group col-sm-12">
-                                    <label class="control-label col-sm-4" for="responseResultType">responseResultType:</label>
+                                    <label class="control-label col-sm-4"
+                                           for="responseResultType">responseResultType:</label>
                                     <div class="col-sm-8">
                                         <select name="responseResultType" id="responseResultType" class="form-control">
                                             <option value="String">String</option>
@@ -180,19 +191,22 @@
                                             <option value="Number">Number</option>
                                             <option value="Boolean">Boolean</option>
                                         </select>
-                                        <span class="text-danger" data-valmsg-for="responseResultType" data-valmsg-replace="true"></span>
+                                        <span class="text-danger" data-valmsg-for="responseResultType"
+                                              data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
                                 <div class="form-group col-sm-12">
                                     <label class="control-label col-sm-4" for="responseResultDataType">responseResultDataType:</label>
                                     <div class="col-sm-8">
-                                        <select name="responseResultDataType" id="responseResultDataType" disabled class="form-control">
+                                        <select name="responseResultDataType" id="responseResultDataType" disabled
+                                                class="form-control">
                                             <option value="String">String</option>
                                             <option value="Object">Object</option>
                                             <option value="Number">Number</option>
                                             <option value="Boolean">Boolean</option>
                                         </select>
-                                        <span class="text-danger" data-valmsg-for="responseResultDataType" data-valmsg-replace="true"></span>
+                                        <span class="text-danger" data-valmsg-for="responseResultDataType"
+                                              data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
 
@@ -200,19 +214,24 @@
                                     <label class="control-label col-sm-4" for="responseJavaClassname">responseJavaClassname:</label>
                                     <div class="col-sm-8">
                                         <input data-val="true" class="col-xs-10 col-sm-10 form-control"
-                                               type="text" id="responseJavaClassname" name="responseJavaClassname" disabled readonly placeholder="responseJavaClassname">
-                                        <span class="text-danger" data-valmsg-for="responseJavaClassname" data-valmsg-replace="true"></span>
+                                               type="text" id="responseJavaClassname" name="responseJavaClassname"
+                                               disabled readonly placeholder="responseJavaClassname">
+                                        <span class="text-danger" data-valmsg-for="responseJavaClassname"
+                                              data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
                                 <div class="form-group col-sm-12">
                                     <label class="control-label col-sm-4" for="description">description:</label>
                                     <div class="col-sm-8">
-                                        <input data-val="true" data-val-required="必填" class="col-xs-10 col-sm-10 form-control"
-                                               type="text" id="description" name="description" placeholder="description">
-                                        <span class="text-danger" data-valmsg-for="description" data-valmsg-replace="true"></span>
+                                        <input data-val="true" data-val-required="必填"
+                                               class="col-xs-10 col-sm-10 form-control"
+                                               type="text" id="description" name="description"
+                                               placeholder="description">
+                                        <span class="text-danger" data-valmsg-for="description"
+                                              data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group col-sm-12">
                                     <div class="uploaderOut">
                                         <div class="uploader-message text-center">
@@ -223,24 +242,29 @@
                                         <div>
                                             <hr class="divider">
                                             <div class="uploader-status pull-right text-muted"></div>
-                                            <button type="button" class="btn btn-link uploader-btn-browse"><i class="icon icon-plus"></i> 选择文件</button>
-                                            <button type="button" class="btn btn-link uploader-btn-start"><i class="icon icon-cloud-upload"></i> 开始上传</button>
+                                            <button type="button" class="btn btn-link uploader-btn-browse"><i
+                                                    class="icon icon-plus"></i> 选择文件
+                                            </button>
+                                            <button type="button" class="btn btn-link uploader-btn-start"><i
+                                                    class="icon icon-cloud-upload"></i> 开始上传
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
 
-                        <button id="parseBtn" type="button" class="btn btn-primary" data-loading-text="解析中...">解析</button>
-                        <button class="btn btn-success" id="recordBtn" disabled type="button">录入Rap2</button>
+                        <button id="parseBtn" type="button" class="btn btn-primary" data-loading-text="解析中...">解析
+                        </button>
+                        <button class="btn btn-success" id="recordBtn" disabled type="button" data-loading-text="录入中...">录入Rap2</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    
+
+
     <div class="panel panel-primary">
         <div class="panel-heading">
             <h4 class="panel-title" data-toggle="collapse" href="#requestJavaClassnameDev">
@@ -259,7 +283,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <div class="panel panel-success">
         <div class="panel-heading">
@@ -279,93 +303,94 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 <script>
     function arrayRemove(arr, value) {
-        return arr.filter(function(ele){
+        return arr.filter(function (ele) {
             return ele !== value;
         });
     }
-    
+
     var $tableResponse = $('#tableResponse');
     var $tableRequest = $('#tableRequest');
-    
+
 
     $.fn.editable.defaults.mode = 'inline';
     var uploaderInFileArray = [];
     var uploaderOutFileArray = [];
-    
+
     $(function () {
         $(".uploaderOut").hide();
-        
-        
-        function requestJavaClassnameFill(){
+
+
+        function requestJavaClassnameFill() {
             var fileName = uploaderInFileArray[0].split(".java")[0];
             $("#requestJavaClassname").val(fileName);
         }
-        function responseJavaClassnameFill(){
+
+        function responseJavaClassnameFill() {
             var fileName = uploaderOutFileArray[0].split(".java")[0];
             $("#responseJavaClassname").val(fileName);
         }
-        
+
         $('.uploaderIn').uploader({
-            url:"/upload/multi",
-            rename:false,
-            filters:{
+            url: "/upload/multi",
+            rename: false,
+            filters: {
                 mime_types: [
                     {title: 'java', extensions: 'java'},
                 ]
             },
-            deleteActionOnDone:function(file, doRemoveFile) {
+            deleteActionOnDone: function (file, doRemoveFile) {
                 $.ajax({
-                    type : "POST",
-                    url : "/upload/delete",
-                    data : {"type":"uploadPathIn"},
-                    dataType : "json",
-                    success : function(data) {
+                    type: "POST",
+                    url: "/upload/delete",
+                    data: {"type": "uploadPathIn"},
+                    dataType: "json",
+                    success: function (data) {
                         $.ajax({
-                            type : "POST",
-                            url : "/upload/delete",
-                            data : {"name":file.name},
-                            dataType : "json",
-                            success : function(data) {
+                            type: "POST",
+                            url: "/upload/delete",
+                            data: {"name": file.name},
+                            dataType: "json",
+                            success: function (data) {
                                 doRemoveFile();
-                                uploaderInFileArray = arrayRemove(uploaderInFileArray,file.name)
+                                uploaderInFileArray = arrayRemove(uploaderInFileArray, file.name)
                                 requestJavaClassnameFill();
                             }
                         })
                     }
                 })
             },
-            onUploadFile: function(file) {
+            onUploadFile: function (file) {
                 uploaderInFileArray.push(file.name);
                 requestJavaClassnameFill();
             }
         });
-        
+
         $('.uploaderOut').uploader({
-            url:"/upload/multi",
-            rename:false,
-            filters:{
+            url: "/upload/multi",
+            rename: false,
+            filters: {
                 mime_types: [
                     {title: 'java', extensions: 'java'},
                 ]
             },
-            deleteActionOnDone:function(file, doRemoveFile) {
+            deleteActionOnDone: function (file, doRemoveFile) {
                 $.ajax({
-                    type : "POST",
-                    url : "/upload/delete",
-                    data : {"name":file.name},
-                    dataType : "json",
-                    success : function(data) {
+                    type: "POST",
+                    url: "/upload/delete",
+                    data: {"name": file.name},
+                    dataType: "json",
+                    success: function (data) {
                         doRemoveFile();
-                        uploaderOutFileArray = arrayRemove(uploaderOutFileArray,file.name)
+                        uploaderOutFileArray = arrayRemove(uploaderOutFileArray, file.name)
                         responseJavaClassnameFill();
                     }
                 })
             },
-            onUploadFile: function(file) {
+            onUploadFile: function (file) {
                 uploaderOutFileArray.push(file.name);
                 responseJavaClassnameFill();
             }
@@ -429,31 +454,31 @@
             treeShowField: 'name',
             parentIdField: 'parentId'
         };
-        
+
         $tableResponse.bootstrapTable(tableOption);
         $tableRequest.bootstrapTable(tableOption);
 
-        $('#parseBtn').on('click', function() {
+        $('#parseBtn').on('click', function () {
             var $btn = $(this);
             $btn.button('loading');
             $.ajax({
-                type : "GET",
-                url : "/data/parse",
-                data : {
-                    "requestJavaClassname":$("input[name='requestJavaClassname']").val(),
-                    "responseJavaClassname":$("input[name='responseJavaClassname']").val(),
-                    "responseResultType":$("select[name='responseResultType']").val(),
-                    "responseResultData.description":$("input[name='description']").val(),
-                    "responseResultData.responseResultDataType":$("select[name='responseResultDataType']").val()
+                type: "GET",
+                url: "/data/parse",
+                data: {
+                    "requestJavaClassname": $("input[name='requestJavaClassname']").val(),
+                    "responseJavaClassname": $("input[name='responseJavaClassname']").val(),
+                    "responseResultType": $("select[name='responseResultType']").val(),
+                    "responseResultData.description": $("input[name='description']").val(),
+                    "responseResultData.responseResultDataType": $("select[name='responseResultDataType']").val()
                 },
-                dataType : "json",
-                success : function(data) {
-                    $tableResponse.bootstrapTable('load',data.responseArray);
+                dataType: "json",
+                success: function (data) {
+                    $tableResponse.bootstrapTable('load', data.responseArray);
                     $tableResponse.treegrid({
                         treeColumn: 1
                     });
 
-                    $tableRequest.bootstrapTable('load',data.requestArray);
+                    $tableRequest.bootstrapTable('load', data.requestArray);
                     $tableRequest.treegrid({
                         treeColumn: 1
                     });
@@ -496,20 +521,30 @@
                         });
                     });
 
+                    new $.zui.Messager('解析成功', {
+                        type: 'success',
+                        close: false // 禁用关闭按钮
+                    }).show();
                     $btn.button('reset');
                     $("#recordBtn").removeAttr("disabled");
+                },
+                error:function (errors) {
+                    $btn.button('reset');
+                    new $.zui.Messager(errors.responseText, {
+                        type: 'danger',
+                        close: false // 禁用关闭按钮
+                    }).show();
                 }
             });
         });
-                
-        
-        
+
+
     });
 
     function calcDataNamePrefix(row) {
         var scope = row.scope;
         var dataNamePrefix = "responseData";
-        if(scope === "request"){
+        if (scope === "request") {
             dataNamePrefix = "requestData";
         }
         return dataNamePrefix;
@@ -517,26 +552,26 @@
 
     function typeFormatter(value, row, index) {
         var dataNamePrefix = calcDataNamePrefix(row);
-        return '<a href="#" class="myeditable type" data-name="'+dataNamePrefix+'[' + index + '].type" data-pk="' + row.id + '" data-type="select" val="' + value + '">' + value + '</a>';
+        return '<a href="#" class="myeditable type" data-name="' + dataNamePrefix + '[' + index + '].type" data-pk="' + row.id + '" data-type="select" val="' + value + '">' + value + '</a>';
     }
 
     function nameFormatter(value, row, index) {
         var dataNamePrefix = calcDataNamePrefix(row);
-        return '<a href="#" class="myeditable prop" data-name="'+dataNamePrefix+'[' + index + '].name" data-pk="' + row.id + '" data-type="text" >' + value + '</a>';
+        return '<a href="#" class="myeditable prop" data-name="' + dataNamePrefix + '[' + index + '].name" data-pk="' + row.id + '" data-type="text" >' + value + '</a>';
     }
 
     function descriptionFormatter(value, row, index) {
         var dataNamePrefix = calcDataNamePrefix(row);
         parentIdType = typeof row.parentId;
-        var parentId = (parentIdType ==='number'?-1:row.parentId);
-        return '<a href="#" class="myeditable description" data-name="'+dataNamePrefix+'[' + index + '].description" data-pk="' + row.id + '" data-type="text" >' + value + '</a>'+
-            '<a href="#" class="hidden myeditable scope hidProp" data-name="'+dataNamePrefix+'[' + index + '].scope" data-pk="' + row.id + '" data-type="text" >' + row.scope + '</a>'+
-            '<a href="#" class="hidden myeditable scope hidProp" data-name="'+dataNamePrefix+'[' + index + '].id" data-pk="' + row.id + '" data-type="text" >' + row.id + '</a>'+
-            '<a href="#" class="hidden myeditable scope hidProp" data-name="'+dataNamePrefix+'[' + index + '].parentId" data-pk="' + row.id + '" data-type="text" >' + parentId + '</a>';
+        var parentId = (parentIdType === 'number' ? -1 : row.parentId);
+        return '<a href="#" class="myeditable description" data-name="' + dataNamePrefix + '[' + index + '].description" data-pk="' + row.id + '" data-type="text" >' + value + '</a>' +
+            '<a href="#" class="hidden myeditable scope hidProp" data-name="' + dataNamePrefix + '[' + index + '].scope" data-pk="' + row.id + '" data-type="text" >' + row.scope + '</a>' +
+            '<a href="#" class="hidden myeditable scope hidProp" data-name="' + dataNamePrefix + '[' + index + '].id" data-pk="' + row.id + '" data-type="text" >' + row.id + '</a>' +
+            '<a href="#" class="hidden myeditable scope hidProp" data-name="' + dataNamePrefix + '[' + index + '].parentId" data-pk="' + row.id + '" data-type="text" >' + parentId + '</a>';
     }
 
     function scopeFormatter(value, row, index) {
-        return '<a href="#" class="myeditable scope" data-name="'+dataNamePrefix+'[' + index + '].scope"  data-pk="' + row.id + '" data-type="text" >' + value + '</a>';
+        return '<a href="#" class="myeditable scope" data-name="' + dataNamePrefix + '[' + index + '].scope"  data-pk="' + row.id + '" data-type="text" >' + value + '</a>';
     }
 
 
@@ -574,32 +609,36 @@
     };
 
     $('#recordBtn').click(function () {
+        var $btn = $(this);
+        $btn.button('loading');
         $('.myeditable').editable('submit', {
             url: '/data/generator',
-            data:{
-              "sid":$("#sid").val(),
-              "sig":$("#sig").val(),
-              "interfaceUrl":$("#interfaceUrl").val(), 
-              "bodyOption":$("input[name='bodyOption']:checked").val(),
-              "requestParamsType":$("input[name='requestParamsType']:checked").val(),
-              "responseResultType":$("#responseResultType").val(), 
-              "responseResultData.responseResultDataType":$("#responseResultType").val(),
-              "responseResultData.description":$("#description").val(),  
+            data: {
+                "sid": $("#sid").val(),
+                "sig": $("#sig").val(),
+                "interfaceUrl": $("#interfaceUrl").val(),
+                "bodyOption": $("input[name='bodyOption']:checked").val(),
+                "requestParamsType": $("input[name='requestParamsType']:checked").val(),
+                "responseResultType": $("#responseResultType").val(),
+                "responseResultData.responseResultDataType": $("#responseResultDataType").val(),
+                "responseResultData.description": $("#description").val(),
             },
             ajaxOptions: {
-                dataType: 'text' 
+                dataType: 'text'
             },
             success: function (data, config) {
                 new $.zui.Messager('执行成功', {
                     type: 'success',
                     close: false // 禁用关闭按钮
                 }).show();
+                $btn.button('reset');
             },
             error: function (errors) {
                 new $.zui.Messager(errors.responseText, {
                     type: 'danger',
                     close: false // 禁用关闭按钮
                 }).show();
+                $btn.button('reset');
             }
         });
     });
@@ -607,46 +646,44 @@
 
     $("#responseResultType").change(function () {
         var responseResultType = $(this).val();
-        if(responseResultType === 'Object' || responseResultType === 'Array'){
+        if (responseResultType === 'Object' || responseResultType === 'Array') {
             $("select[name='responseResultDataType']").removeAttr("disabled");
-            
-            if($("#responseResultDataType").val() === 'Object'){
+
+            if ($("#responseResultDataType").val() === 'Object') {
                 $(".uploaderOut").show();
                 $("input[name='responseJavaClassname']").removeAttr("disabled");
-                $("input[name='description']").attr("disabled","disabled");
+                $("input[name='description']").attr("disabled", "disabled");
             }
         } else {
             $(".uploaderOut").hide();
-            $("input[name='responseJavaClassname']").attr("disabled","disabled");
+            $("input[name='responseJavaClassname']").attr("disabled", "disabled");
             $("input[name='description']").removeAttr("disabled");
-            $("select[name='responseResultDataType']").attr("disabled","disabled");
+            $("select[name='responseResultDataType']").attr("disabled", "disabled");
         }
     });
 
     $("#responseResultDataType").change(function () {
         var responseResultDataType = $(this).val();
-        if(responseResultDataType === 'Object' || responseResultDataType === 'Array'){
+        if (responseResultDataType === 'Object' || responseResultDataType === 'Array') {
             $(".uploaderOut").show();
             $("input[name='responseJavaClassname']").removeAttr("disabled");
-            $("input[name='description']").attr("disabled","disabled");
+            $("input[name='description']").attr("disabled", "disabled");
         } else {
             $(".uploaderOut").hide();
-            $("input[name='responseJavaClassname']").attr("disabled","disabled");
+            $("input[name='responseJavaClassname']").attr("disabled", "disabled");
             $("input[name='description']").removeAttr("disabled");
         }
     });
-    
-    $("input[name='requestParamsType']").change(function(){
-       if($(this).val() === 'BODY_PARAMS'){
-           $("#bodyOptionDiv").removeClass("hidden");
-       } else {
-           $("#bodyOptionDiv").addClass("hidden");
-       }
-    });
-    
-    
 
-    
+    $("input[name='requestParamsType']").change(function () {
+        if ($(this).val() === 'BODY_PARAMS') {
+            $("#bodyOptionDiv").removeClass("hidden");
+        } else {
+            $("#bodyOptionDiv").addClass("hidden");
+        }
+    });
+
+
 </script>
 </body>
 </html>
