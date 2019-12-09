@@ -20,7 +20,6 @@
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/css/bootstrap-editable.css"
           rel="stylesheet"/>
-
     <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 
     <link href="../../static/zui/1.8.1/lib/uploader/zui.uploader.min.css" rel="stylesheet">
@@ -257,7 +256,9 @@
 
                         <button id="parseBtn" type="button" class="btn btn-primary" data-loading-text="解析中...">解析
                         </button>
-                        <button class="btn btn-success" id="recordBtn" disabled type="button" data-loading-text="录入中...">录入Rap2</button>
+                        <button class="btn btn-success" id="recordBtn" disabled type="button"
+                                data-loading-text="录入中...">录入Rap2
+                        </button>
                     </div>
                 </div>
             </div>
@@ -349,15 +350,15 @@
                     url: "/upload/delete",
                     data: {"type": "uploadPathIn"},
                     dataType: "json",
-                    success: function (data) {
+                    success: function () {
                         $.ajax({
                             type: "POST",
                             url: "/upload/delete",
                             data: {"name": file.name},
                             dataType: "json",
-                            success: function (data) {
+                            success: function () {
                                 doRemoveFile();
-                                uploaderInFileArray = arrayRemove(uploaderInFileArray, file.name)
+                                uploaderInFileArray = arrayRemove(uploaderInFileArray, file.name);
                                 requestJavaClassnameFill();
                             }
                         })
@@ -384,9 +385,9 @@
                     url: "/upload/delete",
                     data: {"name": file.name},
                     dataType: "json",
-                    success: function (data) {
+                    success: function () {
                         doRemoveFile();
-                        uploaderOutFileArray = arrayRemove(uploaderOutFileArray, file.name)
+                        uploaderOutFileArray = arrayRemove(uploaderOutFileArray, file.name);
                         responseJavaClassnameFill();
                     }
                 })
@@ -529,7 +530,7 @@
                     $btn.button('reset');
                     $("#recordBtn").removeAttr("disabled");
                 },
-                error:function (errors) {
+                error: function (errors) {
                     $btn.button('reset');
                     new $.zui.Messager(errors.responseText, {
                         type: 'danger',
@@ -594,9 +595,9 @@
                 values: [row.id]
             })
         }
-    }
+    };
 
-    function totalTextFormatter(data) {
+    function totalTextFormatter() {
         return 'Total'
     }
 
@@ -628,13 +629,13 @@
                 dataType: 'text'
             },
             success: function (data, config) {
-                new $.zui.Messager('执行成功', {
+                new $.zui.Messager(data, {
                     type: 'success',
                     close: false // 禁用关闭按钮
                 }).show();
                 $btn.button('reset');
-                localStorage.setItem("sid",$("#sid").val());
-                localStorage.setItem("sig",$("#sig").val());
+                localStorage.setItem("sid", $("#sid").val());
+                localStorage.setItem("sig", $("#sig").val());
 
             },
             error: function (errors) {
@@ -662,7 +663,7 @@
             $(".uploaderOut").hide();
             $("input[name='responseJavaClassname']").attr("disabled", "disabled");
             $("input[name='description']").removeAttr("disabled");
-            $("select[name='responseResultDataType']").attr("disabled", "disabled");
+            $("select[name='responseResultDataType']").val($(this).val()).attr("disabled", "disabled");
         }
     });
 
@@ -686,8 +687,6 @@
             $("#bodyOptionDiv").addClass("hidden");
         }
     });
-
-
 </script>
 </body>
 </html>
