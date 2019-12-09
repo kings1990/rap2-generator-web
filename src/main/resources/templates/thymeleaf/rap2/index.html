@@ -322,7 +322,8 @@
 
     $(function () {
         $(".uploaderOut").hide();
-
+        $("#sid").val(localStorage.getItem("sid"));
+        $("#sig").val(localStorage.getItem("sig"));
 
         function requestJavaClassnameFill() {
             var fileName = uploaderInFileArray[0].split(".java")[0];
@@ -632,6 +633,9 @@
                     close: false // 禁用关闭按钮
                 }).show();
                 $btn.button('reset');
+                localStorage.setItem("sid",$("#sid").val());
+                localStorage.setItem("sig",$("#sig").val());
+
             },
             error: function (errors) {
                 new $.zui.Messager(errors.responseText, {
