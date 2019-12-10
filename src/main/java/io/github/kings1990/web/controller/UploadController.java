@@ -64,27 +64,6 @@ public class UploadController {
         return "1";
     }
 
-    private void deleteAllFiles(String root) {
-        File files[] = new File(root).listFiles();
-        if (files != null) {
-            for (File f : files) {
-                // 判断是否为文件夹
-                if (f.isDirectory()) {  
-                    deleteAllFiles(f.getAbsolutePath());
-                } else {
-                    // 判断是否存在
-                    if (f.exists()) {   
-                        deleteAllFiles(f.getAbsolutePath());
-                        try {
-                            f.delete();
-                        } catch (Exception e) {
-                        }
-                    }
-                }
-            }
-        }
-    }
-
 }
 
 
