@@ -9,9 +9,9 @@ spring:
   thymeleaf:
     cache: false
     encoding: UTF-8
-    mode: HTML5
+    mode: HTML
     prefix: classpath:/templates/thymeleaf/
     
 logging:
   level: 
-    root: debug
+    root: info
