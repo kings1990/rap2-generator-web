@@ -327,13 +327,21 @@
         $("#sig").val(localStorage.getItem("sig"));
 
         function requestJavaClassnameFill() {
-            var fileName = uploaderInFileArray[0].split(".java")[0];
-            $("#requestJavaClassname").val(fileName);
+            if(uploaderInFileArray.length === 0){
+                $("#requestJavaClassname").val("");
+            } else {
+                var fileName = uploaderInFileArray[0].split(".java")[0];
+                $("#requestJavaClassname").val(fileName); 
+            }
         }
 
         function responseJavaClassnameFill() {
-            var fileName = uploaderOutFileArray[0].split(".java")[0];
-            $("#responseJavaClassname").val(fileName);
+            if(uploaderOutFileArray.length === 0){
+                $("#responseJavaClassname").val("");
+            } else {
+                var fileName = uploaderOutFileArray[0].split(".java")[0];
+                $("#responseJavaClassname").val(fileName);
+            }
         }
 
         $('.uploaderIn').uploader({
@@ -348,20 +356,12 @@
                 $.ajax({
                     type: "POST",
                     url: "/upload/delete",
-                    data: {"type": "uploadPathIn"},
+                    data: {"name": file.name},
                     dataType: "json",
                     success: function () {
-                        $.ajax({
-                            type: "POST",
-                            url: "/upload/delete",
-                            data: {"name": file.name},
-                            dataType: "json",
-                            success: function () {
-                                doRemoveFile();
-                                uploaderInFileArray = arrayRemove(uploaderInFileArray, file.name);
-                                requestJavaClassnameFill();
-                            }
-                        })
+                        doRemoveFile();
+                        uploaderInFileArray = arrayRemove(uploaderInFileArray, file.name);
+                        requestJavaClassnameFill();
                     }
                 })
             },
@@ -652,12 +652,13 @@
     $("#responseResultType").change(function () {
         var responseResultType = $(this).val();
         if (responseResultType === 'Object' || responseResultType === 'Array') {
-            $("select[name='responseResultDataType']").removeAttr("disabled");
-
-            if ($("#responseResultDataType").val() === 'Object') {
+            if (responseResultType === 'Object') {
                 $(".uploaderOut").show();
+                $("select[name='responseResultDataType']").val('Object');
                 $("input[name='responseJavaClassname']").removeAttr("disabled");
                 $("input[name='description']").attr("disabled", "disabled");
+            } else {
+                $("select[name='responseResultDataType']").removeAttr("disabled");
             }
         } else {
             $(".uploaderOut").hide();

@@ -12,15 +12,17 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
+import java.util.regex.Pattern;
 
 @RequestMapping("/upload")
 @Controller
 public class UploadController {
     private static final Logger LOGGER = LoggerFactory.getLogger(UploadController.class);
 
+    private static Pattern PATTERN_PACKAGE = Pattern.compile("^package(.*);");
+    
     @PostMapping("/multi")
     @ResponseBody
     public String multiUpload(HttpServletRequest request, String type) {
@@ -29,27 +31,29 @@ public class UploadController {
         for (int i = 0; i < files.size(); i++) {
             MultipartFile file = files.get(i);
             if (file.isEmpty()) {
-                return "上传第" + (i++) + "个文件失败";
+                return "上传第" + (i+1) + "个文件失败";
             }
             String fileName = file.getOriginalFilename();
-
-            File dest = new File(filePath + fileName);
             try {
-                file.transferTo(dest);
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(file.getInputStream()));
+                PrintWriter printWriter = new PrintWriter(filePath + fileName);
+                String s;
+                while ((s = bufferedReader.readLine()) != null) {
+                    //去除包名
+                    if(!PATTERN_PACKAGE.matcher(s).matches()){
+                        printWriter.println(s);
+                    }
+                }
+                bufferedReader.close();
+                printWriter.close();
                 LOGGER.info("第" + (i + 1) + "个文件上传成功");
             } catch (IOException e) {
                 LOGGER.error(e.toString(), e);
-                return "上传第" + (i++) + "个文件失败";
+                return "上传第" + (i+1) + "个文件失败";
             }
         }
         return "上传成功";
     }
-
-    
-    
-    
-    
-    
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     @ResponseBody
@@ -64,10 +68,12 @@ public class UploadController {
         File files[] = new File(root).listFiles();
         if (files != null) {
             for (File f : files) {
-                if (f.isDirectory()) { // 判断是否为文件夹  
+                // 判断是否为文件夹
+                if (f.isDirectory()) {  
                     deleteAllFiles(f.getAbsolutePath());
                 } else {
-                    if (f.exists()) { // 判断是否存在  
+                    // 判断是否存在
+                    if (f.exists()) {   
                         deleteAllFiles(f.getAbsolutePath());
                         try {
                             f.delete();
