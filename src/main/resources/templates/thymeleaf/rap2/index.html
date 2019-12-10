@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link href="../../static/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
-          th:href="@{/static/bootstrap/3.3.5/css/bootstrap.min.css}"/>
-    <link href="../../static/zui/1.8.1/css/zui.min.css" rel="stylesheet"
-          th:href="@{/static/zui/1.8.1/css/zui.min.css}"/>
-    <script src="//cdn.bootcss.com/zui/1.8.1/lib/jquery/jquery.js"></script>
-    <script src="../../static/zui/1.8.1/js/zui.min.js" th:src="@{/static/zui/1.8.1/js/zui.min.js}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-treegrid/0.2.0/css/jquery.treegrid.min.css"
-          rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/zui/1.9.1/css/zui.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zui/1.9.1/lib/jquery/jquery.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zui/1.9.1/js/zui.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-treegrid/0.2.0/css/jquery.treegrid.min.css" rel="stylesheet">
     <link href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-treegrid/0.2.0/js/jquery.treegrid.min.js"></script>
     <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
     <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/extensions/treegrid/bootstrap-table-treegrid.min.js"></script>
 
-    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/css/bootstrap-editable.css"
-          rel="stylesheet"/>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
     <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 
-    <link href="../../static/zui/1.8.1/lib/uploader/zui.uploader.min.css" rel="stylesheet">
-    <script src="../../static/zui/1.8.1/lib/uploader/zui.uploader.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/zui/1.9.1/lib/uploader/zui.uploader.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zui/1.9.1/lib/uploader/zui.uploader.min.js"></script>
 
     <style>
         .treegrid-expander {
@@ -347,6 +345,7 @@
         $('.uploaderIn').uploader({
             url: "/upload/multi",
             rename: false,
+            max_retries:0,
             filters: {
                 mime_types: [
                     {title: 'java', extensions: 'java'},
@@ -374,6 +373,7 @@
         $('.uploaderOut').uploader({
             url: "/upload/multi",
             rename: false,
+            max_retries:0,
             filters: {
                 mime_types: [
                     {title: 'java', extensions: 'java'},

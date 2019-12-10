@@ -1,6 +1,6 @@
 {
   "delosUrl": "http://rap2api.taobao.org",
-  "javaDirPath":"/Users/wilson/Desktop/r/",
+  "javaDirPath":"/usr/local/rap/data/",
   "responseTemplate": [
     {
       "property": "retCode",

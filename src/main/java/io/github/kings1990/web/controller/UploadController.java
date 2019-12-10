@@ -25,7 +25,7 @@ public class UploadController {
     
     @PostMapping("/multi")
     @ResponseBody
-    public String multiUpload(HttpServletRequest request, String type) {
+    public String multiUpload(HttpServletRequest request) throws Exception{
         List<MultipartFile> files = ((MultipartHttpServletRequest) request).getFiles("file");
         String filePath = ConfigUtil.getConfig().getString("javaDirPath");
         for (int i = 0; i < files.size(); i++) {
@@ -48,8 +48,7 @@ public class UploadController {
                 printWriter.close();
                 LOGGER.info("第" + (i + 1) + "个文件上传成功");
             } catch (IOException e) {
-                LOGGER.error(e.toString(), e);
-                return "上传第" + (i+1) + "个文件失败";
+                throw new Exception("上传失败");
             }
         }
         return "上传成功";

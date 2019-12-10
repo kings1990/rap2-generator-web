@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>io.github.kings1990</groupId>
 	<artifactId>rap2-generator-web</artifactId>
-	<version>1.0.7-RELEASE</version>
+	<version>1.0.8-RELEASE</version>
 	<name>rap2-generator-web</name>
 	<description>rap2 w3eb</description>
 
