@@ -10,7 +10,7 @@ public class IndexController {
 
     @GetMapping(value = "")
     public String test() {
-        return "/rap2/index";
+        return "rap2/index";
     }
 }
 
