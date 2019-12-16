@@ -659,7 +659,7 @@
         if (responseResultType === 'Object' || responseResultType === 'Array') {
             if (responseResultType === 'Object') {
                 $(".uploaderOut").show();
-                $("select[name='responseResultDataType']").val('Object');
+                $("select[name='responseResultDataType']").val('Object').attr("disabled", "disabled");
                 $("input[name='responseJavaClassname']").removeAttr("disabled");
                 $("input[name='description']").attr("disabled", "disabled");
             } else {
