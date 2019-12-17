@@ -32,6 +32,13 @@
         .treegrid-expander {
             top: 5px;
         }
+        select.input-sm {
+            height: 30px;
+            line-height: 30px;
+        }
+        .editableform .control-group{
+            line-height: 30px;
+        }
     </style>
 </head>
 <body>
@@ -518,6 +525,7 @@
                     $('.type').each(function () {
                         $(this).editable({
                             value: $(this).attr('val'),
+                            inputclass:"a",
                             source: [
                                 {value: 'String', text: 'String'},
                                 {value: 'Number', text: 'Number'},
