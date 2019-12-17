@@ -66,5 +66,37 @@ java文件上传的第一个为主解析类,意思为如果A继承B、B继承C,�
 ### 输出
 解析后的输出参数,可以对字段进行修改和删除
 
+## 启动配置
+修改**resource**目录下的**config.json**文件
+
+>delosUrl  
+>rap2后端数据API服务器地址,如:http://rap2api.taobao.org
+
+>javaDirPath  
+>java文件上传目录
+
+>responseTemplate
+>自定义响应模板,[参考wiki](https://github.com/kings1990/rap2-generator/wiki/自定义响应模板)
+
+
+1.打包
+
+```
+mvn clean install
+```
+
+2.启动
+
+```
+nohup java -jar rap2-generator-web-版本.jar > /dev/null 2>&1 &
+```
+
+3.访问
+
+```
+http://localhost:9100
+```
+
+
 ## 操作
 输入必要的表单,上传类文件,然后点击**解析**按钮,待解析成功检查输入和输出参数无误后再点击**录入rap2**按钮,等结果就行
