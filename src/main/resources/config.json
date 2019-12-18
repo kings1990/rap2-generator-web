@@ -13,11 +13,6 @@
       "type": "Number"
     },
     {
-      "property": "url",
-      "description": "链接地址",
-      "type": "String"
-    },
-    {
       "property": "result",
       "description": "结果",
       "resultFlag": true
