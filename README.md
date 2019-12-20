@@ -1,4 +1,30 @@
-# Rap2 Generator Web
+<h1 align="center">为自动化而生</h1>
+
+
+<div align="center"><img align="center" src="https://oscimg.oschina.net/oscnet/a964e875efa442570fe3a7cdfded0027183.jpg"/></div>
+
+<div align="center">
+	<span>
+		<a href="https://travis-ci.com/kings1990/rap2-generator-web">
+			<img src="https://travis-ci.com/kings1990/rap2-generator-web.svg?branch=master">
+		</a>
+	</span>
+	<span>
+		<a href="https://github.com/kings1990/rap2-generator-web">
+			<img src="https://img.shields.io/badge/language-java/html-orange.svg"/>
+		</a>
+	</span>
+	<span>
+        <a href="https://spring.io/projects/spring-boot">
+            <img src="https://img.shields.io/badge/springboot-2.2.1.RELEASE-ff69b4.svg"/>
+        </a>
+    </span>
+	<span>
+		<a href="https://www.apache.org/licenses/LICENSE-2.0">
+			<img src="https://img.shields.io/badge/license-Apache2-pink.svg"/>
+		</a>	
+	</span>
+</div>
 
 ## Rap2 Generator Web是啥
 以网页操作形式将java类解析录入到rap2管理端
