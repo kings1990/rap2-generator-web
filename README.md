@@ -101,7 +101,10 @@ http://localhost:9100
 ## 操作
 输入必要的表单,上传类文件,然后点击**解析**按钮,待解析成功检查输入和输出参数无误后再点击**录入rap2**按钮,等结果就行
 
+## 主项目
+[https://github.com/kings1990/rap2-generator](https://github.com/kings1990/rap2-generator)
+
 ## 捐赠
 项目的发展离不开你的支持，请作者喝杯咖啡吧！
 
-![](https://oscimg.oschina.net/oscnet/up-0fbac9cefa83d1e3084e86f5cd4100990d2.JPEG)
+<img width="200px" height="200px" src="https://oscimg.oschina.net/oscnet/up-6141a96daef0c833057462dc752f27bdcc1.JPEG"/>
