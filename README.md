@@ -129,8 +129,3 @@ http://localhost:9100
 
 ## 主项目
 [https://github.com/kings1990/rap2-generator](https://github.com/kings1990/rap2-generator)
-
-## 捐赠
-项目的发展离不开你的支持，请作者喝杯咖啡吧！
-
-<img width="200px" height="200px" src="https://oscimg.oschina.net/oscnet/up-6141a96daef0c833057462dc752f27bdcc1.JPEG"/>
