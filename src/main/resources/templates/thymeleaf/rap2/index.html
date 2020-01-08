@@ -39,6 +39,13 @@
         .editableform .control-group{
             line-height: 30px;
         }
+        .tab-fixed{
+            position: fixed;
+            right: 0;
+            left: 0;
+            z-index: 999; 
+        }
+        
     </style>
 </head>
 <body>
@@ -60,10 +67,19 @@
 </nav>
 
 <div class="container">
+    <div class="col-sm-1 tab-fixed">
+    <ul class="nav nav-tabs nav-stacked ">
+        <li><a href="#step1">配置</a></li>
+        <li><a href="#step2">类文件</a></li>
+        <li><a href="#step3">输入</a></li>
+        <li><a href="#step4">输出</a></li>
+    </ul>
+    </div>
 
-    <div class="panel panel-info">
+    <div class="col-sm-12 tab-content">
+    <div class="panel panel-info" id="step1">
         <div class="panel-heading">
-            <h4 class="panel-title" data-toggle="collapse" href="#config">
+            <h4 class="panel-title" >
                 <a href="javascript:">配置</a>
             </h4>
         </div>
@@ -139,7 +155,7 @@
         </div>
     </div>
 
-    <div class="panel panel-danger">
+    <div class="panel panel-danger" id="step2">
         <div class="panel-heading">
             <h4 class="panel-title" data-toggle="collapse" href="#classFileDev">
                 <a href="javascript:">类文件</a>
@@ -276,7 +292,7 @@
     </div>
 
 
-    <div class="panel panel-primary">
+    <div class="panel panel-primary" id="step3">
         <div class="panel-heading">
             <h4 class="panel-title" data-toggle="collapse" href="#requestJavaClassnameDev">
                 <a href="javascript:">输入</a>
@@ -296,7 +312,7 @@
     </div>
 
 
-    <div class="panel panel-success">
+    <div class="panel panel-success" id="step4">
         <div class="panel-heading">
             <h4 class="panel-title" data-toggle="collapse" href="#responseJavaClassnameDev">
                 <a href="javascript:">输出</a>
@@ -314,7 +330,7 @@
             </div>
         </div>
     </div>
-
+    </div>
 </div>
 <script>
     function arrayRemove(arr, value) {
