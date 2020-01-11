@@ -49,7 +49,7 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-inverse" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation" style="position: absolute;width: 100%;z-index: 1000;">
     <div class="container-fluid">
         <!-- 导航头部 -->
         <div class="navbar-header">
@@ -66,14 +66,16 @@
     </div>
 </nav>
 
-<div class="container">
-    <div class="col-sm-1 tab-fixed">
-    <ul class="nav nav-tabs nav-stacked ">
-        <li><a href="#step1">配置</a></li>
-        <li><a href="#step2">类文件</a></li>
-        <li><a href="#step3">输入</a></li>
-        <li><a href="#step4">输出</a></li>
-    </ul>
+<div class="container"  style="position: relative;top: 60px;">
+    <div class="row">
+    <div class="col-sm-1 " style="position: fixed;top: 45px;left: 0;" id="menu">
+        <ul class="nav nav-secondary nav-stacked">
+            <li class="active a-step"><a href="#step1">配置</a></li>
+            <li class="a-step"><a href="#step2">类文件</a></li>
+            <li class="a-step"><a href="#step3">输入</a></li>
+            <li class="a-step"><a href="#step4">输出</a></li>
+        </ul>
+        
     </div>
 
     <div class="col-sm-12 tab-content">
@@ -331,6 +333,7 @@
         </div>
     </div>
     </div>
+    </div>
 </div>
 <script>
     function arrayRemove(arr, value) {
@@ -348,6 +351,24 @@
     var uploaderOutFileArray = [];
 
     $(function () {
+        //步骤选择
+        $(".a-step").click(function () {
+            $(".a-step").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        
+
+        $(window).scroll(function(event){
+            var top = $(document).scrollTop();
+            if(top < 40){
+                $("#menu").css("top",45); 
+            } else {
+                $("#menu").css("top",0);
+            }
+            
+        });
+        
         $(".uploaderOut").hide();
         $("#sid").val(localStorage.getItem("sid"));
         $("#sig").val(localStorage.getItem("sig"));
