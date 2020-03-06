@@ -30,11 +30,7 @@
 以网页操作形式将java类解析录入到rap2管理端
 
 ## Online
-***非常重要:下载该项目进行本地部署,定制属于自己的工具***
 
-仓库地址:***[https://github.com/kings1990/rap2-generator-web](https://github.com/kings1990/rap2-generator-web)***
-
-Online
 地址:***[http://rap.sheng90.wang/](http://rap.sheng90.wang/)***
 
 ## 组成
