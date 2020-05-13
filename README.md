@@ -29,6 +29,10 @@
 ## Rap2 Generator Web是啥
 以网页操作形式将java类解析录入到rap2管理端
 
+## Online
+
+地址:***[http://rap.sheng90.wang/](http://rap.sheng90.wang/)***
+
 ## 组成
 * 配置
 * 类文件
