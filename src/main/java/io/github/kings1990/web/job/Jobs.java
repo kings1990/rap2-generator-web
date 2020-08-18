@@ -9,7 +9,7 @@ import java.io.File;
 @Component
 public class Jobs {
 
-    @Scheduled(cron="0 0/2 * * * ?")
+    @Scheduled(cron="0 0 0/2 * * ?")
     public void deleteJob(){
         String filePath = ConfigUtil.getConfig().getString("javaDirPath");
         deleteAllFiles(filePath);
