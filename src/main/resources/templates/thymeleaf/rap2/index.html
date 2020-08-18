@@ -110,8 +110,13 @@
                         <div class="form-group col-sm-12">
                             <label class="control-label col-sm-1" for="interfaceUrl">接口地址:</label>
                             <div class="col-sm-11">
-                                <input data-val="true" data-val-required="必填" class="col-xs-10 col-sm-10 form-control"
-                                       type="text" id="interfaceUrl" name="interfaceUrl" placeholder="interfaceUrl">
+                                <div class="input-group">
+                                    <input data-val="true" data-val-required="必填" class="col-xs-10 col-sm-10 form-control"
+                                           type="text" id="interfaceUrl" name="interfaceUrl" placeholder="interfaceUrl">
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-primary" type="button" id="go">Go-></a>
+                                    </span>
+                                 </div>
                                 <span class="text-danger" data-valmsg-for="interfaceUrl"
                                       data-valmsg-replace="true"></span>
                             </div>
@@ -736,6 +741,13 @@
             $("#bodyOptionDiv").removeClass("hidden");
         } else {
             $("#bodyOptionDiv").addClass("hidden");
+        }
+    });
+    
+    $("#go").click(function (){
+        var url = $("input[name='interfaceUrl']").val();
+        if(url){
+            window.open(url);
         }
     });
 </script>
