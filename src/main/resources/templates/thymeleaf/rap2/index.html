@@ -645,7 +645,7 @@
 
     operateEvents = {
         'click .remove': function (e, value, row, index) {
-            $tableResponse.bootstrapTable('remove', {
+            $($(this)[0].$body.context).bootstrapTable('remove', {
                 field: 'id',
                 values: [row.id]
             })
